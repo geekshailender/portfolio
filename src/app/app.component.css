@@ -1,0 +1,38 @@
+.spacer {
+    flex: 1 1 auto; /* Takes up all available space */
+  }
+  
+  .desktop-nav {
+    display: flex; /* Arrange buttons horizontally */
+  }
+  
+  .mobile-menu-button {
+    display: none; /* Hide on larger screens */
+  }
+  
+  .mobile-menu {
+    display: flex;
+    flex-direction: column; /* Arrange buttons vertically */
+    background-color: #3f51b5; /* Match toolbar color */
+    position: absolute; /* So it overlays the content */
+    top: 64px; /* Adjust if your toolbar height is different */
+    left: 0;
+    right: 0;
+    z-index: 1000;  /* Ensure it's above other content */
+  }
+  
+  .mobile-menu a {
+    color: white;  /* White text for mobile menu */
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 600px) { /* Adjust breakpoint as needed */
+    .desktop-nav {
+      display: none; /* Hide desktop nav on small screens */
+    }
+  
+    .mobile-menu-button {
+      display: block; /* Show mobile menu button */
+    }
+  }
+  
